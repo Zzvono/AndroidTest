@@ -1,9 +1,16 @@
 package com.example.androidtest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+private var counter = 0
+lateinit var textViewCounter: TextView
+lateinit var buttonUp: Button
+lateinit var buttonDown: Button
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,6 +18,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Toast.makeText(applicationContext, "onCreate", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onCreate")
+
+        textViewCounter = findViewById(R.id.textViewCounter)
+        buttonUp = findViewById(R.id.buttonUp)
+        buttonDown = findViewById(R.id.buttonDown)
+
+        buttonUp.setOnClickListener{
+            counter++
+            if(counter == 10)
+            {
+                counter = 0
+                val intent = Intent(this, SuccessActivity::class.java).apply{
+                    putExtra("name", findViewById<TextView>(R.id.plainTextName).text.toString())
+                }
+                startActivity(intent)
+            }
+            textViewCounter.text = counter.toString()
+        }
+        buttonDown.setOnClickListener{
+            if(counter>0)
+            {
+                counter--
+                textViewCounter.text = counter.toString()
+            }
+        }
+
     }
     override fun onStart() {
         super.onStart()
