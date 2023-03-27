@@ -13,6 +13,7 @@ private var counter = 0
 lateinit var textViewCounter: TextView
 lateinit var buttonUp: Button
 lateinit var buttonDown: Button
+lateinit var formInput: Button
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,15 +23,16 @@ class MainActivity : AppCompatActivity() {
         Log.i("MyLog", "onCreate")
 
         textViewCounter = findViewById(R.id.textViewCounter)
-        buttonUp = findViewById(R.id.buttonUp)
+        buttonUp = findViewById(R.id.insert_button)
         buttonDown = findViewById(R.id.buttonDown)
+        formInput = findViewById(R.id.formInput)
 
         buttonUp.setOnClickListener {
             counter ++
             if(counter == 10) {
                 counter = 0
                 val intent = Intent( this, SuccessActivity::class.java).apply{
-                    putExtra("name", findViewById<TextView>(R.id.plainTextName).text.toString())
+                    putExtra("name", findViewById<TextView>(R.id.steps_input).text.toString())
                 }
                 startActivity(intent)
             }
@@ -42,6 +44,13 @@ class MainActivity : AppCompatActivity() {
                 counter ++
             }
             textViewCounter.text = counter.toString()
+        }
+        formInput.setOnClickListener{
+
+            val intent = Intent(this, HighActivity::class.java)
+
+            startActivity(intent)
+
         }
     }
     override fun onStart() {

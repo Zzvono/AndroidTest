@@ -9,47 +9,37 @@
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="710dp"
+        android:background="@drawable/running_abstract"
         android:gravity="center"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="20dp"
-        android:background="@drawable/running_abstract">
+        tools:layout_editor_absoluteY="16dp">
 
-        <TextView
-            android:background="?colorSecondary"
-            android:textColor="?colorOnSecondary"
-            android:id="@+id/textViewCounter"
+        <EditText
+            android:id="@+id/name_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" />
+            android:background="?colorSecondary"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textColor="?colorOnSecondary" />
+
+        <EditText
+            android:id="@+id/steps_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?colorSecondary"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Steps"
+            android:textColor="?colorOnSecondary" />
 
         <Button
             android:id="@+id/insert_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Up" />
-
-        <Button
-            android:id="@+id/buttonDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Down" />
-
-        <EditText
-            android:background="?colorSecondary"
-            android:textColor="?colorOnSecondary"
-            android:id="@+id/steps_input"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
-
-        <Button
-            android:id="@+id/formInput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HIGHSCORE" />
+            android:text="Insert" />
 
     </LinearLayout>
 
