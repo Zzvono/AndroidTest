@@ -4,9 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.*
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+
 private var counter = 0
 lateinit var textViewCounter: TextView
 lateinit var buttonUp: Button
@@ -23,26 +25,24 @@ class MainActivity : AppCompatActivity() {
         buttonUp = findViewById(R.id.buttonUp)
         buttonDown = findViewById(R.id.buttonDown)
 
-        buttonUp.setOnClickListener{
-            counter++
-            if(counter == 10)
-            {
+        buttonUp.setOnClickListener {
+            counter ++
+            if(counter == 10) {
                 counter = 0
-                val intent = Intent(this, SuccessActivity::class.java).apply{
+                val intent = Intent( this, SuccessActivity::class.java).apply{
                     putExtra("name", findViewById<TextView>(R.id.plainTextName).text.toString())
                 }
                 startActivity(intent)
             }
             textViewCounter.text = counter.toString()
         }
-        buttonDown.setOnClickListener{
-            if(counter>0)
-            {
-                counter--
-                textViewCounter.text = counter.toString()
+        buttonDown.setOnClickListener {
+            counter --
+            if(counter < 0) {
+                counter ++
             }
+            textViewCounter.text = counter.toString()
         }
-
     }
     override fun onStart() {
         super.onStart()
@@ -54,24 +54,39 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "onPause", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onPause")
     }
-    override fun onResume() {
+    override fun  onResume() {
         super.onResume()
         Toast.makeText(applicationContext, "onResume", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onResume")
     }
-    override fun onStop() {
+    override fun  onStop() {
         super.onStop()
         Toast.makeText(applicationContext, "onStop", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onStop")
     }
-    override fun onDestroy() {
+    override fun  onDestroy() {
         super.onDestroy()
         Toast.makeText(applicationContext, "onDestroy", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onDestroy")
     }
-    override fun onRestart() {
+    override fun  onRestart() {
         super.onRestart()
         Toast.makeText(applicationContext, "onRestart", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onRestart")
+    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.restore_counter -> {
+                counter=0
+                textViewCounter.text=counter.toString()
+                true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

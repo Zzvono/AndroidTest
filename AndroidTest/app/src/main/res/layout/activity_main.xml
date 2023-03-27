@@ -7,12 +7,17 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="409dp"
+        android:layout_height="710dp"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="20dp"
+        android:background="@drawable/running_abstract">
 
         <TextView
+            android:background="?colorSecondary"
+            android:textColor="?colorOnSecondary"
             android:id="@+id/textViewCounter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +27,7 @@
             android:id="@+id/buttonUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UP" />
+            android:text="Up" />
 
         <Button
             android:id="@+id/buttonDown"
@@ -31,13 +36,15 @@
             android:text="Down" />
 
         <EditText
+            android:background="?colorSecondary"
+            android:textColor="?colorOnSecondary"
             android:id="@+id/plainTextName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name" />
-    </LinearLayout>
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
