@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.channels.ChannelResult.Companion.success
+import kotlin.Result.Companion.success
 
 class SuccessActivity : AppCompatActivity() {
     lateinit var textView: TextView
@@ -19,7 +21,7 @@ class SuccessActivity : AppCompatActivity() {
         buttonSend = findViewById(R.id.buttonSend)
 
         val name = intent.getStringExtra("name")
-        textView.text = "$name uspjesno ste dosli do 10 koraka."
+        textView.text = getString(R.string.success, name);
 
         buttonSend.setOnClickListener {
             val uri: Uri = Uri.parse("smsto:0385979545897")

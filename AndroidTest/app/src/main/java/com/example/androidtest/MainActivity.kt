@@ -95,6 +95,7 @@ class MainActivity : AppCompatActivity() {
                 textViewCounter.text=counter.toString()
                 true
             }
+            R.id.croatian -
         }
         return super.onOptionsItemSelected(item)
     }

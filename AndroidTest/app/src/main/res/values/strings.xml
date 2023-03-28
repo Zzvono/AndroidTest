@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Fit Runner</string>
+    <string name="app_name" translatable="false">Fit Runner</string>
+    <string name="reset">Reset</string>
+    <string name="up">Up</string>
+    <string name="down">Down</string>
+    <string name="name">Name</string>
+    <string name="highscore">Highscore</string>
+    <string name="name_high">Name</string>
+    <string name="steps">Steps</string>
+    <string name="insert">Insert</string>
+    <string name="textview">TextView</string>
+    <string name="send">Send</string>
+    <string name="croatian">Croatian</string>
+    <string name="english">English</string>
+    <string name="success">%s succesfully came to 10 steps</string>
 </resources>

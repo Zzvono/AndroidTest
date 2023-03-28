@@ -6,6 +6,6 @@
 
     <item
         android:id="@+id/restore_counter"
-        android:title="Resetiraj" />
+        android:title="@string/reset" />
 
 </menu>

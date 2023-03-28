@@ -22,7 +22,7 @@
             android:background="?colorSecondary"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="@string/name_high"
             android:textColor="?colorOnSecondary" />
 
         <EditText
@@ -32,14 +32,14 @@
             android:background="?colorSecondary"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Steps"
+            android:text="@string/steps"
             android:textColor="?colorOnSecondary" />
 
         <Button
             android:id="@+id/insert_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Insert" />
+            android:text="@string/insert" />
 
     </LinearLayout>
 
