@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MapActivity">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -18,47 +18,24 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewCounter"
+            android:id="@+id/longitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?colorSecondary"
-            android:text="0"
+            android:text="Longitude: "
             android:textAlignment="center"
-            android:textColor="?colorOnSecondary" />
-
-        <Button
-            android:id="@+id/buttonUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/up"/>
-
-        <Button
-            android:id="@+id/buttonDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/down" />
-
-        <EditText
-            android:id="@+id/plainTextField"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:background="?colorSecondary"
             android:textColor="?colorOnSecondary"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="@string/name" />
+            android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/highscore"
+        <TextView
+            android:id="@+id/latitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/highscore" />
-
-        <Button
-            android:id="@+id/map"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/map" />
+            android:background="?colorSecondary"
+            android:text="Latitude: "
+            android:textAlignment="center"
+            android:textColor="?colorOnSecondary"
+            android:textSize="24sp" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

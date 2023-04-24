@@ -1,10 +1,12 @@
 package com.example.androidtest
+
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
 
-class HighActivity: AppCompatActivity() {
+class activity_high : AppCompatActivity() {
+
     private lateinit var insert_button: Button
     private lateinit var name_input: EditText
     private lateinit var steps_input: EditText
@@ -25,5 +27,4 @@ class HighActivity: AppCompatActivity() {
             db.addHighScore(name.trim(), steps)
         }
     }
-
 }

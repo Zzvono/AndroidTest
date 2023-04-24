@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="down">DOLJE</string>
+    <string name="up">GORE</string>
+    <string name="name">Ime</string>
+    <string name="highscore">Rekord</string>
+    <string name="send">POŠALJI</string>
+    <string name="insert">UNESI</string>
+    <string name="steps">Koraci</string>
+    <string name="reset">RESETIRAJ</string>
+    <string name="croatian">Hrvatski</string>
+    <string name="english">Engleski</string>
+    <string name="success">%1$s, čestitke na 10 koraka!</string>
+    <string name="map">Mapa</string>
+</resources>
